@@ -7,7 +7,6 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -46,7 +45,7 @@
         <br>
         <label for="email">movieName:</label>
         <input type="text" th:field="*{movieName}" class="form-control" id="email" placeholder="Enter movieName"
-          name="movieName" pattern="[A-Za-z]{4,20}" title="Length of the Movie Name must be between 4-20" required>
+          name="movieName" required>
       </div>
       <div class="form-group">
         <label for="pwd">movieUrl:</label>
@@ -62,7 +61,7 @@
         <br>
         <label for="email">Duration:</label>
         <input type="number" th:field="*{duration}" class="form-control" id="email" placeholder="Enter Duration"
-          name="Duration" pattern="[A-Za-z]{1}" title="Length should not exceed 1" required>
+          name="Duration" pattern="[0-9]{1}" title="Length should not exceed 1" required>
       </div>
 
       <div class="form-group">
@@ -71,18 +70,6 @@
         <input type="text" th:field="*{movieCast}" class="form-control" id="email" placeholder="Enter Actors Name"
           name="movieCast">
       </div>
-      <!-- 
-        <label for="cars">Choose actors:</label>
-        <select style="width:100%" th:field="*{movieCast}" name="cars" id="cars" multiple>
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="opel">Opel</option>
-          <option value="audi">Audi</option>
-             <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="opel">Opel</option>
-          <option value="audi">Audi</option>
-        </select>  -->
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
   </div>
