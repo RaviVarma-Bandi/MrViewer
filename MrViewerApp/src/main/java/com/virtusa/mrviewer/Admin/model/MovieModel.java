@@ -15,17 +15,14 @@ public class MovieModel {
     private int movieId;
 
     @NotBlank
-    @NotNull
     @Column(name = "movieName", unique = true)
     private String movieName;
 
     @NotBlank
-    @NotNull
     @Column(name = "movieUrl")
     private String movieUrl;
 
     @NotBlank
-    @NotNull
     @Column(name = "moviePostUrl")
     private String moviePosterUrl;
 
@@ -34,7 +31,6 @@ public class MovieModel {
 
     @Positive
     @NotBlank
-    @NotNull
     @Size(min = 1, max = 1)
     @Column(name = "duration")
     private int duration;
