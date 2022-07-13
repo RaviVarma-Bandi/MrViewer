@@ -31,7 +31,7 @@ public class MovieController {
     MovieService movieService;
 
     @GetMapping
-    @PostMapping("/")
+    @PostMapping("/admin/home")
     public String index() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("addActor");
@@ -39,7 +39,7 @@ public class MovieController {
     }
 
     // @RequestMapping(value = "/addMovie", method = RequestMethod.GET)
-    @GetMapping("/addMovie")
+    @GetMapping("/admin/addMovie")
     public String addMovie(@Valid @ModelAttribute MovieModel movie, Model model) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("addMovie");
@@ -47,21 +47,21 @@ public class MovieController {
         return "addMovie.html";
     }
 
-    @PostMapping("/addMovie")
+    @PostMapping("/admin/addMovie")
     public String saveMovie(@Valid MovieModel movieModel, BindingResult result, Model model) {
 
         movieService.addMovie(movieModel);
         return "MovieAdded.html";
     }
 
-    @GetMapping("/getAll")
+    @GetMapping("/user/getAllMovies")
     public String getAll(Model model) {
         model.addAttribute("movies", movieService.getall());
         return "index.html";
 
     }
 
-    @GetMapping("/getById/{id}")
+    @GetMapping("/user/getMovieById/{id}")
     public ResponseEntity<Optional<MovieModel>> getById(@PathVariable("id") int id) {
         try {
             Optional<MovieModel> movie = movieService.getById(id);
@@ -71,13 +71,13 @@ public class MovieController {
         }
     }
 
-    @GetMapping("/deleteMovieById")
+    @GetMapping("/admin/deleteMovieById")
     public String deleteMovieById(@RequestParam int movieId) {
         movieService.deleteById(movieId);
         return "MovieDeleted.html";
     }
 
-    @PutMapping("/updateById/{id}")
+    @PutMapping("/admin/updateById/{id}")
     public ResponseEntity<?> updateById(@RequestBody MovieModel student, @PathVariable("id") int id) {
         try {
             movieService.updateById(student, id);
@@ -87,14 +87,14 @@ public class MovieController {
         }
     }
 
-    @GetMapping("/updateMovieById")
+    @GetMapping("/admin/updateMovieById")
     public String updateMovieById(@RequestParam("movieId") int movieId, Model model) {
         
         model.addAttribute("movie", movieService.getById(movieId));
         return "updateMovie.html";
     }
 
-    @PostMapping("/updateMovieById")
+    @PostMapping("/admin/updateMovieById")
     public String updateMovie(@RequestParam("movieId") int movieId, MovieModel movieModel, BindingResult result,
             Model model) {
 
