@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Movie Preview</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		.navbar {
+			margin-bottom: 50px;
+			border-radius: 0;
+		}
+
+		.jumbotron {
+			margin-bottom: 0;
+		}
+
+		footer {
+			background-color: #f2f2f2;
+			padding: 25px;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/user/movie">MR-VIEWER</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="/user/movie">Movies</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="jumbotron">
+		<div class="container text-center bg-img">
+			<h1 th:text=${moviename}></h1>
+			<p>The film stars Yash, Sanjay Dutt, Raveena Tandon, Srinidhi Shetty and Prakash Raj.
+				It follows the assassin Rocky, who after establishing himself as the kingpin of the Kolar Gold Fields,
+				must retain his supremacy over adversaries and government officials, while also coming to
+				terms with his past.</p>
+		</div>
+		<div class="border border-light p-3 mb-4">
+
+			<div class="text-center ">
+				<button type="button" class="btn btn-primary">
+					<a th:href="${movieurl}" style="color: white;" target="_blank">Watch Movie</a></button>
+			</div>
+			<br>
+		</div>
+	</div>
+
+
+	<footer class="container-fluid text-center">
+		<div class="container mt-2">
+			<div class="row">
+				<h2 th:text=${moviecast}></h2>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
