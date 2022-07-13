@@ -1,7 +1,0 @@
-package com.example.user.service;
-
-import com.example.user.model.Like;
-
-public class ILikeService {
-	public Like addLike();
-}
