@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MovieModel.java&apos; to &apos;User/src/main/java/com.example.user.model&apos;&#x0A;- Original project: &apos;MrViewer&apos;&#x0A;- Destination element: &apos;User/src/main/java/com.example.user.model&apos;&#x0A;- Original element: &apos;MovieModel.java&apos;" description="Copy file" destination="=User/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.user.model" element1="Admin/src/main/java/com/example/admin/model/MovieModel.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1657687701112" units="0" version="1.0"/>
+</session>

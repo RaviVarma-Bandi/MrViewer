@@ -1,0 +1,9 @@
+package com.example.user.service;
+
+public class LikeService {
+	private final LikeRepository likerepository;
+	
+	public LikeService(LikeRepository likerepo) {
+		this.likerepository=likerepo;
+	}
+}
