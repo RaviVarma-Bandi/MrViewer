@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Mr. Viewer</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<h1 style="padding:10px;">Mr.Viewer</h1>
+
+	<div align="center">
+		<h1>Reg Form</h1>
+		<form action="#" th:action="@{/user/signup}" method="post"
+			th:object="${user}">
+			
+			
+			<div style="color:red;" th:if="${not #lists.isEmpty(errors)}">
+			   <p th:each="error : ${errors}" th:text="${error}"></p>
+			</div>
+			
+			Email: <input type="email" th:field="*{email}" required> <br>
+			Password: <input type="password" th:field="*{password}" minlength=8 required> <br>
+			Username: <input type="text" th:field="*{username}" required> <br>
+			Mobile Number: <input type="tel" pattern="[0-9]{10}" th:field="*{mobileNumber}" required><br> 
+			Gender: <select th:field="*{gender}" required>
+				<option th:value="'MALE'" th:text="Male"></option>
+				<option th:value="'FEMALE'" th:text="Female"></option>
+			</select><br>
+			<button type="submit">Submit</button><br>
+		</form>
+		<a th:href="@{/login}">Login</a>
+		<a href="/admin/report">Click me</a>
+	</div>
+</body>
+</html>
