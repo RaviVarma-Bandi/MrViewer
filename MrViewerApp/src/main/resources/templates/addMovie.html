@@ -41,7 +41,7 @@
       <h2><strong>ADD MOVIE</strong>
             <h2>
     </div>
-    <form action="#" th:action="@{/addMovie}" th:object="${movie}" method="post" onsubmit="submitButton()">
+    <form action="#" th:action="@{admin//addMovie}" th:object="${movie}" method="post" onsubmit="submitButton()">
       <div class="form-group">
         <br>
         <label for="email">movieName:</label>
@@ -92,7 +92,7 @@
   function submitButton() {
     alert = ("Movie Successfully added!!");
 
-    location.href = 'http://localhost/Moviesadded';
+    location.href = 'http://localhost/admin/Moviesadded';
   }
 </script>
 
