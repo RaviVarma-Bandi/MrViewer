@@ -33,13 +33,4 @@ public class MovieServiceImpl implements MovieService {
         movieRepository.deleteById(id);
     }
 
-    @Override
-    public void updateById(MovieModel movieObj, int id) {
-        Optional<MovieModel> movieModel = movieRepository.findById(id);
-        movieModel.orElseThrow().setMovieName(movieObj.getMovieName());
-        movieModel.orElseThrow().setMovieUrl(movieObj.getMovieUrl());
-        movieModel.orElseThrow().setMoviePosterUrl(movieObj.getMoviePosterUrl());
-        movieModel.orElseThrow().setMovieCast(movieObj.getMovieCast());
-        movieModel.orElseThrow().setDuration(movieObj.getDuration());
-    }
 }
