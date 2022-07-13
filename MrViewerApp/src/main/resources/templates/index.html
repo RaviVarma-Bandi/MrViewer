@@ -83,6 +83,7 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+  <title>Movies</title>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -100,65 +101,7 @@
 <button type="button" th:href="@{/admin/addMovie}" 
   class="btn btn-lg btn-primary btn-block">Add New Movie</button>
 <div class="container mt-2">
-  <!-- 
-  <div class="row">
-    <div class="col-md-3 col-sm-6 item">
-      <div class="card item-card card-block">
-        <h4 class="card-title text-right"><i class="material-icons">settings</i></h4>
-        <img src="https://images.indianexpress.com/2022/05/KGF2-1200by667.jpg" alt="Photo of sunset">
-        <h5 class="item-card-title mt-3 mb-3">Sierra Web Development • Owner</h5>
-        <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
-        <button type="button" class="btn btn-success">Watch movie</button>
-        <button type="button" class="btn btn-danger">Remove</button>
-        <br><br>
-        <button type="button" class="btn btn-primary">View Cast</button>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 item">
-      <div class="card item-card card-block">
-        <h4 class="item-card-title text-right"><i class="material-icons">settings</i></h4>
-        <img
-          src="https://images.thedirect.com/media/article_full/doctor-strange-multiverse-of-madness-ending-mistake.jpg?imgeng=cmpr_75/"
-          alt="Photo of sunset">
-        <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-        <p class="card-text">This is a company that builds websites, web .</p>
-        <button type="button" class="btn btn-success">Watch movie</button>
-        <button type="button" class="btn btn-danger">Remove</button>
-        <br><br>
-        <button type="button" class="btn btn-primary">View Cast</button>
-
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 item">
-      <div class="card item-card card-block">
-        <h4 class="item-card-title text-right"><i class="material-icons">settings</i></h4>
-        <img
-          src="https://phantom-marca.unidadeditorial.es/0a724e04ef14eb20321d3cdb31ca87e4/resize/1320/f/webp/assets/multimedia/imagenes/2022/05/28/16537530418245.jpg"
-          alt="Photo of sunset">
-        <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-        <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
-        <button type="button" class="btn btn-success">Watch movie</button>
-        <button type="button" class="btn btn-danger">Remove</button>
-        <br><br>
-        <button type="button" class="btn btn-primary">View Cast</button>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 item">
-      <div class="card item-card card-block">
-        <h4 class="item-card-title text-right"><i class="material-icons">settings</i></h4>
-        <img src="https://alphanewscall.com/wp-content/uploads/2022/02/jurassic-world-3-1068x601.jpg"
-          alt="Photo of sunset">
-        <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-        <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
-        <button type="button" class="btn btn-success">Watch movie</button>
-        <button type="button" class="btn btn-danger">Remove</button>
-        <br><br>
-        <button type="button" class="btn btn-primary">View Cast</button>
-      </div>
-    </div>
-
-  </div> -->
-
+  
 <br>
   <div class="col-md-3 col-sm-6 item" th:each="movie: ${movies}">
     <div class="card item-card card-block">
