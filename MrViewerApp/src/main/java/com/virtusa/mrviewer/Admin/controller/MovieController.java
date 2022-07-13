@@ -61,15 +61,7 @@ public class MovieController {
 
     }
 
-    @GetMapping("/user/getMovieById/{id}")
-    public ResponseEntity<Optional<MovieModel>> getById(@PathVariable("id") int id) {
-        try {
-            Optional<MovieModel> movie = movieService.getById(id);
-            return new ResponseEntity<>(movie, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
+    
 
     @GetMapping("/admin/deleteMovieById")
     public String deleteMovieById(@RequestParam int movieId) {
